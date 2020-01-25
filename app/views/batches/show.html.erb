@@ -1,0 +1,27 @@
+# Страница показа данных из загруженного файла
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Batch:</strong>
+  <%= @batch.batch_id %>
+</p>
+
+<p>
+  <strong>Creation date:</strong>
+  <%= @batch.creation_date %>
+</p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @batch.guid %>
+</p>
+
+<p>
+  <strong>Attachment:</strong>
+  <% if @batch.batch_file %>
+    <br /><%= @batch.batch_file %></br>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_batch_path(@batch) %> |
+<%= link_to 'Back', batches_path %>

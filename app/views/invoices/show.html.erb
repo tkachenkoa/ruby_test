@@ -1,0 +1,25 @@
+# Форма для показа данных товаров из инвойса
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice operation number:</strong>
+  <%= @invoice.invoice_operation_number %>
+</p>
+
+<p>
+  <strong>Invoice operation date:</strong>
+  <%= @invoice.invoice_operation_date %>
+</p>
+
+<p>
+  <strong>Company code:</strong>
+  <%= @invoice.company_code %>
+</p>
+
+<p>
+  <strong>Batch:</strong>
+  <%= @invoice.batch_id %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

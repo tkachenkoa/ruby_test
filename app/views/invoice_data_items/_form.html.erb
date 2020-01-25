@@ -1,0 +1,38 @@
+# Стандартная форма объекта Инвойс
+<%= form_with(model: invoice_data_item, local: true) do |form| %>
+  <% if invoice_data_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(invoice_data_item.errors.count, "error") %> prohibited this invoice_data_item from being saved:</h2>
+
+      <ul>
+        <% invoice_data_item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :parcel_code %>
+    <%= form.number_field :parcel_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_qty %>
+    <%= form.number_field :item_qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parcel_price %>
+    <%= form.number_field :parcel_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :invoice_id %>
+    <%= form.text_field :invoice_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

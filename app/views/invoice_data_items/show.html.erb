@@ -1,0 +1,25 @@
+# Форма для показа данных инвойса
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parcel code:</strong>
+  <%= @invoice_data_item.parcel_code %>
+</p>
+
+<p>
+  <strong>Item qty:</strong>
+  <%= @invoice_data_item.item_qty %>
+</p>
+
+<p>
+  <strong>Parcel price:</strong>
+  <%= @invoice_data_item.parcel_price %>
+</p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @invoice_data_item.invoice_id %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_data_item_path(@invoice_data_item) %> |
+<%= link_to 'Back', invoice_data_items_path %>
